@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#10141B">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkV4aXQgVGlja2V0IC0gSUJLUiBMaW1pdCBTZWxsIENhbGN1bGF0b3IiLAogICJzaG9ydF9uYW1lIjogIkV4aXQgVGlja2V0IiwKICAic3RhcnRfdXJsIjogIi4iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxMDE0MUIiLAogICJ0aGVtZV9jb2xvciI6ICIjMTAxNDFCIiwKICAiaWNvbnMiOiBbCiAgICB7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBeE9USWdNVGt5SWo0OGNtVmpkQ0IzYVdSMGFEMGlNVGt5SWlCb1pXbG5hSFE5SWpFNU1pSWdjbmc5SWpJNElpQm1hV3hzUFNJak1UQXhOREZDSWk4K1BISmxZM1FnZUQwaU1qWWlJSGs5SWpRMklpQjNhV1IwYUQwaU1UUXdJaUJvWldsbmFIUTlJakV3TUNJZ2NuZzlJakUwSWlCbWFXeHNQU0lqTVRjeFF6STFJaUJ6ZEhKdmEyVTlJaU15UVRNeE5EQWlJSE4wY205clpTMTNhV1IwYUQwaU1pSXZQanhqYVhKamJHVWdZM2c5SWprMklpQmplVDBpTkRZaUlISTlJamdpSUdacGJHdzlJaU14TURFME1VSWlMejQ4WTJseVkyeGxJR040UFNJNU5pSWdZM2s5SWpFME5pSWdjajBpT0NJZ1ptbHNiRDBpSXpFd01UUXhRaUl2UGp4d1lYUm9JR1E5SWswMU9DQTVObWcyTm0wd0lEQnNMVEU0TFRFNGJURTRJREU0YkMweE9DQXhPQ0lnYzNSeWIydGxQU0lqUkRSQk9EUTNJaUJ6ZEhKdmEyVXRkMmxrZEdnOUlqY2lJR1pwYkd3OUltNXZibVVpSUhOMGNtOXJaUzFzYVc1bFkyRndQU0p5YjNWdVpDSWdjM1J5YjJ0bExXeHBibVZxYjJsdVBTSnliM1Z1WkNJdlBqd3ZjM1puUGdvPSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCJ9LAogICAgeyJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQXhPVElnTVRreUlqNDhjbVZqZENCM2FXUjBhRDBpTVRreUlpQm9aV2xuYUhROUlqRTVNaUlnY25nOUlqSTRJaUJtYVd4c1BTSWpNVEF4TkRGQ0lpOCtQSEpsWTNRZ2VEMGlNallpSUhrOUlqUTJJaUIzYVdSMGFEMGlNVFF3SWlCb1pXbG5hSFE5SWpFd01DSWdjbmc5SWpFMElpQm1hV3hzUFNJak1UY3hRekkxSWlCemRISnZhMlU5SWlNeVFUTXhOREFpSUhOMGNtOXJaUzEzYVdSMGFEMGlNaUl2UGp4amFYSmpiR1VnWTNnOUlqazJJaUJqZVQwaU5EWWlJSEk5SWpnaUlHWnBiR3c5SWlNeE1ERTBNVUlpTHo0OFkybHlZMnhsSUdONFBTSTVOaUlnWTNrOUlqRTBOaUlnY2owaU9DSWdabWxzYkQwaUl6RXdNVFF4UWlJdlBqeHdZWFJvSUdROUlrMDFPQ0E1Tm1nMk5tMHdJREJzTFRFNExURTRiVEU0SURFNGJDMHhPQ0F4T0NJZ2MzUnliMnRsUFNJalJEUkJPRFEzSWlCemRISnZhMlV0ZDJsa2RHZzlJamNpSUdacGJHdzlJbTV2Ym1VaUlITjBjbTlyWlMxc2FXNWxZMkZ3UFNKeWIzVnVaQ0lnYzNSeWIydGxMV3hwYm1WcWIybHVQU0p5YjNWdVpDSXZQand2YzNablBnbz0iLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifQogIF0KfQo=">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjI4IiBmaWxsPSIjMTAxNDFCIi8+PHJlY3QgeD0iMjYiIHk9IjQ2IiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjEwMCIgcng9IjE0IiBmaWxsPSIjMTcxQzI1IiBzdHJva2U9IiMyQTMxNDAiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9Ijk2IiBjeT0iNDYiIHI9IjgiIGZpbGw9IiMxMDE0MUIiLz48Y2lyY2xlIGN4PSI5NiIgY3k9IjE0NiIgcj0iOCIgZmlsbD0iIzEwMTQxQiIvPjxwYXRoIGQ9Ik01OCA5Nmg2Nm0wIDBsLTE4LTE4bTE4IDE4bC0xOCAxOCIgc3Ryb2tlPSIjRDRBODQ3IiBzdHJva2Utd2lkdGg9IjciIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPgo=">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjI4IiBmaWxsPSIjMTAxNDFCIi8+PHJlY3QgeD0iMjYiIHk9IjQ2IiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjEwMCIgcng9IjE0IiBmaWxsPSIjMTcxQzI1IiBzdHJva2U9IiMyQTMxNDAiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9Ijk2IiBjeT0iNDYiIHI9IjgiIGZpbGw9IiMxMDE0MUIiLz48Y2lyY2xlIGN4PSI5NiIgY3k9IjE0NiIgcj0iOCIgZmlsbD0iIzEwMTQxQiIvPjxwYXRoIGQ9Ik01OCA5Nmg2Nm0wIDBsLTE4LTE4bTE4IDE4bC0xOCAxOCIgc3Ryb2tlPSIjRDRBODQ3IiBzdHJva2Utd2lkdGg9IjciIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPgo=">
+<title>Exit Ticket — IBKR Limit Sell Calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #10141B;
+    --surface: #171C25;
+    --surface-2: #1E2430;
+    --border: #2A3140;
+    --text: #ECE9DF;
+    --text-dim: #8B93A3;
+    --text-faint: #5C6573;
+    --gold: #D4A847;
+    --gold-dim: #8a7239;
+    --gain: #57B894;
+    --loss: #C95C4F;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 20% 0%, rgba(212,168,71,0.05), transparent 40%),
+      var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    padding-bottom:48px;
+  }
+  .num{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;}
+  .wrap{max-width:480px;margin:0 auto;padding:18px 16px 8px;}
+
+  header.top{padding:6px 4px 18px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    color:var(--gold);
+    text-transform:uppercase;
+  }
+  h1{
+    margin:4px 0 4px;
+    font-size:26px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .sub{color:var(--text-dim);font-size:13px;line-height:1.5;}
+
+  .card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:16px;
+    margin-bottom:14px;
+  }
+  .card h2{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--text-dim);
+    margin:0 0 12px;
+    font-weight:600;
+  }
+  .row{display:flex;gap:10px;margin-bottom:10px;}
+  .row > div{flex:1;}
+  label{
+    display:block;
+    font-size:12px;
+    color:var(--text-dim);
+    margin-bottom:5px;
+  }
+  input[type=number], input[type=text]{
+    width:100%;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:9px;
+    color:var(--text);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:16px;
+    padding:11px 10px;
+    -webkit-appearance:none;
+    appearance:none;
+  }
+  select{
+    width:100%;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:9px;
+    color:var(--text);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:16px;
+    padding:11px 10px;
+  }
+  input:focus, select:focus{outline:2px solid var(--gold); outline-offset:1px;}
+
+  .check{
+    display:flex;align-items:center;gap:9px;
+    font-size:13px;color:var(--text-dim);
+    margin-top:4px;
+  }
+  .check input{width:17px;height:17px;accent-color:var(--gold);}
+
+  .btngroup{display:flex;gap:8px;margin-bottom:12px;}
+  .btngroup button{
+    flex:1;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    color:var(--text-dim);
+    padding:10px 6px;
+    border-radius:9px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.03em;
+    cursor:pointer;
+  }
+  .btngroup button.active{
+    background:rgba(212,168,71,0.12);
+    border-color:var(--gold);
+    color:var(--gold);
+  }
+
+  .quickrow{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 2px;}
+  .quickrow button{
+    background:transparent;
+    border:1px solid var(--border);
+    color:var(--text-dim);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    padding:6px 10px;
+    border-radius:20px;
+    cursor:pointer;
+  }
+  .quickrow button:active{border-color:var(--gold);color:var(--gold);}
+
+  details{margin-bottom:14px;}
+  summary{
+    cursor:pointer;
+    list-style:none;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:14px 16px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--text-dim);
+    font-weight:600;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary .chev{transition:transform .2s;color:var(--text-faint);}
+  details[open] summary .chev{transform:rotate(180deg);}
+  .fee-body{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-top:none;
+    border-radius:0 0 14px 14px;
+    padding:16px;
+    margin-top:-14px;
+  }
+  .hidden{display:none !important;}
+  .reset-link{
+    background:none;border:none;color:var(--text-faint);
+    font-size:11px;text-decoration:underline;cursor:pointer;
+    padding:0;margin-top:6px;font-family:'IBM Plex Sans',sans-serif;
+  }
+
+  .tabs{display:flex;gap:8px;margin-bottom:16px;}
+  .tabs button{
+    flex:1;
+    padding:13px 8px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    background:var(--surface);
+    color:var(--text-dim);
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:.03em;
+    cursor:pointer;
+  }
+  .tabs button.active{
+    background:var(--gold);
+    border-color:var(--gold);
+    color:#1a1409;
+  }
+
+  .panel{display:none;}
+  .panel.active{display:block;}
+
+  /* Ticket */
+  .ticket{
+    position:relative;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:16px;
+    overflow:hidden;
+  }
+  .ticket-perf{
+    height:14px;
+    background-image: radial-gradient(circle at 8px 7px, var(--bg) 5px, transparent 5.5px);
+    background-size:16px 14px;
+    background-repeat:repeat-x;
+    background-color:var(--surface-2);
+  }
+  .ticket-head{
+    padding:16px 18px 4px;
+    display:flex;justify-content:space-between;align-items:baseline;
+  }
+  .ticket-head .label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);}
+  .ticket-head .tag{font-size:11px;color:var(--gold);font-family:'IBM Plex Mono',monospace;letter-spacing:.05em;}
+  .ticket-main{padding:2px 18px 14px;}
+  .ticket-main .big{
+    font-size:38px;font-weight:600;letter-spacing:-0.01em;line-height:1.1;
+  }
+  .ticket-main .pnl-line{
+    margin-top:8px;font-size:15px;font-weight:600;
+  }
+  .ticket-main .pnl-line .pct{color:var(--text-dim);font-weight:400;font-size:13px;}
+  .gain{color:var(--gain);}
+  .loss{color:var(--loss);}
+  .ticket-divider{border-top:1px dashed var(--border);margin:0 18px;}
+  .ticket-rows{padding:12px 18px 16px;}
+  .ticket-rows .r{
+    display:flex;justify-content:space-between;
+    font-size:13px;padding:4px 0;
+    color:var(--text-dim);
+  }
+  .ticket-rows .r span:last-child{color:var(--text);}
+  .ticket-rows .r.total{
+    border-top:1px solid var(--border);
+    margin-top:4px;padding-top:8px;
+    color:var(--text);font-weight:600;
+  }
+  .placeholder{
+    padding:30px 18px;text-align:center;color:var(--text-faint);font-size:13px;
+  }
+  .warn{
+    margin-top:10px;padding:10px 12px;border-radius:9px;
+    background:rgba(201,92,79,0.12);border:1px solid rgba(201,92,79,0.35);
+    color:#e0928a;font-size:12.5px;line-height:1.5;
+  }
+  .linkbtn{
+    margin-top:10px;width:100%;
+    background:var(--surface);border:1px solid var(--border);
+    color:var(--gold);padding:10px;border-radius:9px;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    cursor:pointer;
+  }
+  footer{
+    text-align:center;color:var(--text-faint);font-size:11px;
+    padding:18px 20px 4px;line-height:1.6;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="eyebrow">IBKR · Limit Orders</div>
+    <h1>Exit Ticket</h1>
+    <div class="sub">Work out the limit sell price — or the number of units — you need to hit a PnL target, net of commissions.</div>
+  </header>
+
+  <!-- POSITION -->
+  <div class="card">
+    <h2>Position</h2>
+    <div class="row">
+      <div>
+        <label>Average price</label>
+        <input type="number" id="avgPrice" class="clearable" inputmode="decimal" placeholder="0.00" step="0.0001">
+      </div>
+      <div>
+        <label>Units held</label>
+        <input type="number" id="unitsHeld" class="clearable" inputmode="decimal" placeholder="0" step="1">
+      </div>
+      <div style="flex:0.7">
+        <label>Currency</label>
+        <select id="currency">
+          <option value="$">USD $</option>
+          <option value="£">GBP £</option>
+          <option value="€">EUR €</option>
+          <option value="RM">MYR RM</option>
+        </select>
+      </div>
+    </div>
+    <label class="check"><input type="checkbox" id="includeBuyFee" checked> Add estimated buy-side commission to cost basis</label>
+    <div class="btngroup" id="modeGroup" style="margin-top:14px;">
+      <button data-val="per_share" class="active">Per‑share (US stocks &amp; ETFs)</button>
+      <button data-val="pct_value">% of trade value (UCITS/LSE)</button>
+    </div>
+    <div style="font-size:11.5px;color:var(--text-faint);margin:-6px 0 0;line-height:1.5;">US-listed stocks and ETFs share the identical IBKR schedule. Rates themselves live in Fee schedule, below.</div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button id="tabBtnPrice" class="active">Find sell price</button>
+    <button id="tabBtnUnits">Find units to sell</button>
+  </div>
+
+  <!-- PANEL: PRICE -->
+  <div class="panel active" id="panelPrice">
+    <div class="card">
+      <h2>Target</h2>
+      <div class="row">
+        <div>
+          <label>Quantity to sell</label>
+          <input type="number" id="qtySell" class="clearable" inputmode="decimal" step="1">
+        </div>
+        <div>
+          <label>Target PnL %</label>
+          <input type="number" id="targetPct" class="clearable" inputmode="decimal" step="0.1" value="10">
+        </div>
+      </div>
+      <div class="quickrow">
+        <button data-pct="5">5%</button>
+        <button data-pct="10">10%</button>
+        <button data-pct="15">15%</button>
+        <button data-pct="20">20%</button>
+        <button data-pct="25">25%</button>
+        <button data-pct="30">30%</button>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-perf"></div>
+      <div class="ticket-head"><span class="label">Limit Sell · GTC</span><span class="tag" id="tagPriceA">—</span></div>
+      <div class="ticket-main" id="ticketAMain">
+        <div class="placeholder">Enter average price and units held to calculate</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL: UNITS -->
+  <div class="panel" id="panelUnits">
+    <div class="card">
+      <h2>Target</h2>
+      <div class="row">
+        <div>
+          <label>Limit sell price</label>
+          <input type="number" id="sellPriceB" class="clearable" inputmode="decimal" step="0.0001">
+        </div>
+      </div>
+      <div class="btngroup" id="targetModeGroup">
+        <button data-val="amount" class="active">Target $ amount</button>
+        <button data-val="pct">Target %</button>
+      </div>
+      <div class="row">
+        <div>
+          <label id="targetValueLabel">Target PnL ($)</label>
+          <input type="number" id="targetValueB" class="clearable" inputmode="decimal" step="1" value="500">
+        </div>
+      </div>
+      <button class="linkbtn" id="usePriceA">Use price from "Find sell price" ticket</button>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-perf"></div>
+      <div class="ticket-head"><span class="label">Limit Sell · Partial</span><span class="tag" id="tagPriceB">—</span></div>
+      <div class="ticket-main" id="ticketBMain">
+        <div class="placeholder">Enter average price, units held and a limit price to calculate</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEE SCHEDULE -->
+  <details id="feeDetails">
+    <summary>Fee schedule <span class="chev">⌄</span></summary>
+    <div class="fee-body">
+      <div class="btngroup" id="pricingGroup">
+        <button data-val="fixed">Fixed</button>
+        <button data-val="tiered" class="active">Tiered</button>
+      </div>
+
+      <div id="fs-per-fixed" class="hidden">
+        <div class="row">
+          <div><label>Rate / share</label><input type="number" id="pf_rate" step="0.0001" value="0.005"></div>
+          <div><label>Minimum / order</label><input type="number" id="pf_min" step="0.01" value="1.00"></div>
+          <div><label>Cap % of value</label><input type="number" id="pf_cap" step="0.1" value="1"></div>
+        </div>
+      </div>
+      <div id="fs-per-tiered">
+        <div class="row">
+          <div><label>Commission / share</label><input type="number" id="pt_rate" step="0.0001" value="0.0035"></div>
+          <div><label>Minimum / order</label><input type="number" id="pt_min" step="0.01" value="0.35"></div>
+        </div>
+        <div class="row">
+          <div><label>Exchange pass‑through / share</label><input type="number" id="pt_pass" step="0.0001" value="0.0030"></div>
+          <div><label>Cap % of value</label><input type="number" id="pt_cap" step="0.1" value="1"></div>
+        </div>
+      </div>
+      <div id="fs-pct-fixed" class="hidden">
+        <div class="row">
+          <div><label>Rate % of value</label><input type="number" id="qf_rate" step="0.001" value="0.05"></div>
+          <div><label>Minimum / order</label><input type="number" id="qf_min" step="0.01" value="4.00"></div>
+        </div>
+      </div>
+      <div id="fs-pct-tiered" class="hidden">
+        <div class="row">
+          <div><label>Base minimum / order</label><input type="number" id="qt_basemin" step="0.01" value="1.70"></div>
+          <div><label>Exchange fee %</label><input type="number" id="qt_exchrate" step="0.0001" value="0.0045"></div>
+        </div>
+        <div class="row">
+          <div><label>Exchange fee minimum</label><input type="number" id="qt_exchmin" step="0.01" value="0.10"></div>
+          <div><label>Clearing fee (flat)</label><input type="number" id="qt_clear" step="0.01" value="0.08"></div>
+        </div>
+      </div>
+      <button class="reset-link" id="resetFees">Reset to IBKR defaults</button>
+    </div>
+  </details>
+
+  <footer>
+    Calculator only — not connected to your IBKR account. Fee defaults are editable estimates based on IBKR's published schedules and may not reflect your exact account, market, or current rates. Always confirm the order ticket in TWS before submitting.
+  </footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const num = id => { const v = parseFloat($(id).value); return isFinite(v) ? v : NaN; };
+
+const DEFAULTS = {
+  mode: 'per_share',
+  pricing: 'tiered',
+  pf_rate:0.005, pf_min:1.00, pf_cap:1,
+  pt_rate:0.0035, pt_min:0.35, pt_pass:0.0030, pt_cap:1,
+  qf_rate:0.05, qf_min:4.00,
+  qt_basemin:1.70, qt_exchrate:0.0045, qt_exchmin:0.10, qt_clear:0.08
+};
+
+let state = { mode:'per_share', pricing:'tiered', includeBuyFee:true, currency:'$', targetMode:'amount' };
+const PERSIST_INPUT_IDS = ['avgPrice','unitsHeld','qtySell','targetPct','sellPriceB','targetValueB'];
+
+function fmt(n, dp=2){
+  if(!isFinite(n)) return '—';
+  return n.toLocaleString(undefined,{minimumFractionDigits:dp,maximumFractionDigits:dp});
+}
+function money(n, dp=2){ return state.currency + fmt(n, dp); }
+
+function feeParams(){
+  return {
+    pf_rate:num('pf_rate'), pf_min:num('pf_min'), pf_cap:num('pf_cap'),
+    pt_rate:num('pt_rate'), pt_min:num('pt_min'), pt_pass:num('pt_pass'), pt_cap:num('pt_cap'),
+    qf_rate:num('qf_rate'), qf_min:num('qf_min'),
+    qt_basemin:num('qt_basemin'), qt_exchrate:num('qt_exchrate'), qt_exchmin:num('qt_exchmin'), qt_clear:num('qt_clear')
+  };
+}
+
+function computeFee(qty, grossValue){
+  const p = feeParams();
+  if(state.mode === 'per_share'){
+    if(state.pricing === 'fixed'){
+      let fee = Math.max(qty * p.pf_rate, p.pf_min);
+      if(p.pf_cap > 0){ const cap = Math.max(grossValue * p.pf_cap/100, p.pf_min); fee = Math.min(fee, cap); }
+      return fee;
+    } else {
+      let fee = Math.max(qty * p.pt_rate, p.pt_min) + qty * p.pt_pass;
+      if(p.pt_cap > 0){ const cap = Math.max(grossValue * p.pt_cap/100, p.pt_min); fee = Math.min(fee, cap); }
+      return fee;
+    }
+  } else {
+    if(state.pricing === 'fixed'){
+      return Math.max(grossValue * p.qf_rate/100, p.qf_min);
+    } else {
+      const exch = Math.max(grossValue * p.qt_exchrate/100, p.qt_exchmin);
+      return p.qt_basemin + exch + p.qt_clear;
+    }
+  }
+}
+
+function solveRoot(fn, lo, hi, iters=90){
+  let flo = fn(lo);
+  for(let i=0;i<iters;i++){
+    const mid = (lo+hi)/2;
+    const fmid = fn(mid);
+    if((flo<0) === (fmid<0)){ lo = mid; flo = fmid; } else { hi = mid; }
+  }
+  return (lo+hi)/2;
+}
+
+// ---------- TAB A: solve for price ----------
+function calcPriceMode(){
+  const avgPrice = num('avgPrice');
+  const unitsHeld = num('unitsHeld');
+  let qty = num('qtySell');
+  const targetPct = num('targetPct');
+  const main = $('ticketAMain'); const tag = $('tagPriceA');
+
+  if(!avgPrice || avgPrice<=0 || !unitsHeld || unitsHeld<=0){
+    main.innerHTML = '<div class="placeholder">Enter average price and units held to calculate</div>';
+    tag.textContent = '—';
+    return;
+  }
+  if(!qty || qty<=0) qty = unitsHeld;
+  if(qty > unitsHeld) qty = unitsHeld;
+
+  const grossCost = avgPrice * qty;
+  const buyFee = state.includeBuyFee ? computeFee(qty, grossCost) : 0;
+  const totalCost = grossCost + buyFee;
+  const targetPnL = (targetPct||0)/100 * totalCost;
+
+  const f = S => { const gross = S*qty; const fee = computeFee(qty, gross); return (gross - fee - totalCost) - targetPnL; };
+  const hiBound = Math.max(avgPrice*8, (totalCost + Math.abs(targetPnL)) / qty * 8 + 10);
+  const price = solveRoot(f, 0.0001, hiBound);
+
+  const grossProceeds = price * qty;
+  const sellFee = computeFee(qty, grossProceeds);
+  const netProceeds = grossProceeds - sellFee;
+  const netPnL = netProceeds - totalCost;
+  const totalFees = buyFee + sellFee;
+
+  const fBE = S => { const gross=S*qty; const fee=computeFee(qty,gross); return gross - fee - totalCost; };
+  const breakeven = solveRoot(fBE, 0.0001, hiBound);
+
+  const cls = netPnL >= 0 ? 'gain' : 'loss';
+  const sign = netPnL >= 0 ? '+' : '−';
+
+  tag.textContent = `${qty} units · LMT`;
+  main.innerHTML = `
+    <div class="big num">${money(price,4)}</div>
+    <div class="pnl-line ${cls}">${sign}${money(Math.abs(netPnL))} <span class="pct">(${(targetPct||0).toFixed(1)}% target)</span></div>
+    <div class="ticket-divider"></div>
+    <div class="ticket-rows">
+      <div class="r"><span>Cost basis (${qty} × ${money(avgPrice,4)})</span><span class="num">${money(grossCost)}</span></div>
+      ${state.includeBuyFee ? `<div class="r"><span>Est. buy commission</span><span class="num">${money(buyFee)}</span></div>` : ''}
+      <div class="r"><span>Gross sell proceeds</span><span class="num">${money(grossProceeds)}</span></div>
+      <div class="r"><span>Sell commission</span><span class="num">${money(sellFee)}</span></div>
+      <div class="r total"><span>Net PnL</span><span class="num ${cls}">${sign}${money(Math.abs(netPnL))}</span></div>
+      <div class="r"><span>Total fees (buy + sell)</span><span class="num">${money(totalFees)}</span></div>
+      <div class="r"><span>Breakeven price</span><span class="num">${money(breakeven,4)}</span></div>
+    </div>
+  `;
+}
+
+// ---------- TAB B: solve for units ----------
+function netPnLForQ(Q, avgPrice, sellPrice){
+  const grossCost = avgPrice * Q;
+  const buyFee = state.includeBuyFee ? computeFee(Q, grossCost) : 0;
+  const totalCost = grossCost + buyFee;
+  const grossProceeds = sellPrice * Q;
+  const sellFee = computeFee(Q, grossProceeds);
+  const netProceeds = grossProceeds - sellFee;
+  return { netPnL: netProceeds - totalCost, totalCost, buyFee, sellFee, grossProceeds, netProceeds, grossCost };
+}
+
+function calcUnitsMode(){
+  const avgPrice = num('avgPrice');
+  const unitsHeld = num('unitsHeld');
+  const sellPrice = num('sellPriceB');
+  const targetValue = num('targetValueB');
+  const main = $('ticketBMain'); const tag = $('tagPriceB');
+
+  if(!avgPrice || avgPrice<=0 || !unitsHeld || unitsHeld<=0 || !sellPrice || sellPrice<=0){
+    main.innerHTML = '<div class="placeholder">Enter average price, units held and a limit price to calculate</div>';
+    tag.textContent = '—';
+    return;
+  }
+
+  const maxAtFull = netPnLForQ(unitsHeld, avgPrice, sellPrice).netPnL;
+
+  const g = Q => {
+    const r = netPnLForQ(Q, avgPrice, sellPrice);
+    const target = state.targetMode === 'amount' ? (targetValue||0) : (targetValue||0)/100 * r.totalCost;
+    return r.netPnL - target;
+  };
+
+  const gMax = g(unitsHeld);
+  let unreachable = false;
+  if((sellPrice <= avgPrice && (targetValue||0) > 0) || gMax < 0){
+    unreachable = true;
+  }
+
+  let Qexact = solveRoot(g, 0, unitsHeld);
+  if(Qexact < 0) Qexact = 0;
+  if(Qexact > unitsHeld) Qexact = unitsHeld;
+  const Qceil = Math.min(Math.ceil(Qexact), unitsHeld);
+  const Qfloor = Math.max(Math.floor(Qexact), 0);
+
+  const rCeil = netPnLForQ(Qceil || 1, avgPrice, sellPrice);
+  const useQ = Qceil > 0 ? Qceil : 1;
+  const r = netPnLForQ(useQ, avgPrice, sellPrice);
+  const remaining = unitsHeld - useQ;
+  const cls = r.netPnL >= 0 ? 'gain' : 'loss';
+  const sign = r.netPnL >= 0 ? '+' : '−';
+
+  tag.textContent = `@ ${money(sellPrice,4)} · LMT`;
+
+  let warnHtml = '';
+  if(unreachable){
+    warnHtml = `<div class="warn">Even selling all ${fmt(unitsHeld,0)} units at this price doesn't reach the target (max net PnL ≈ ${money(maxAtFull)}). Raise the limit price or lower the target.</div>`;
+  }
+
+  main.innerHTML = `
+    <div class="big num">${fmt(useQ,0)} <span style="font-size:18px;color:var(--text-dim);font-weight:400;">units</span></div>
+    <div class="pnl-line ${cls}">${sign}${money(Math.abs(r.netPnL))} actual net PnL</div>
+    <div class="ticket-divider"></div>
+    <div class="ticket-rows">
+      <div class="r"><span>Cost basis sold</span><span class="num">${money(r.grossCost)}</span></div>
+      ${state.includeBuyFee ? `<div class="r"><span>Est. buy commission</span><span class="num">${money(r.buyFee)}</span></div>` : ''}
+      <div class="r"><span>Gross proceeds</span><span class="num">${money(r.grossProceeds)}</span></div>
+      <div class="r"><span>Sell commission</span><span class="num">${money(r.sellFee)}</span></div>
+      <div class="r total"><span>Net PnL</span><span class="num ${cls}">${sign}${money(Math.abs(r.netPnL))}</span></div>
+      <div class="r"><span>Units remaining after sale</span><span class="num">${fmt(remaining,0)}</span></div>
+      <div class="r"><span>Exact (unrounded) units</span><span class="num">${fmt(Qexact,2)}</span></div>
+    </div>
+    ${warnHtml}
+  `;
+}
+
+function calcAll(){ calcPriceMode(); calcUnitsMode(); }
+
+// ---------- wiring ----------
+function setActiveBtn(group, val){
+  document.querySelectorAll(`#${group} button`).forEach(b=>{
+    b.classList.toggle('active', b.dataset.val === val);
+  });
+}
+
+document.querySelectorAll('#modeGroup button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    state.mode = b.dataset.val;
+    setActiveBtn('modeGroup', state.mode);
+    $('fs-per-fixed').classList.toggle('hidden', state.mode!=='per_share' || state.pricing!=='fixed');
+    $('fs-per-tiered').classList.toggle('hidden', state.mode!=='per_share' || state.pricing!=='tiered');
+    $('fs-pct-fixed').classList.toggle('hidden', state.mode!=='pct_value' || state.pricing!=='fixed');
+    $('fs-pct-tiered').classList.toggle('hidden', state.mode!=='pct_value' || state.pricing!=='tiered');
+    saveSettings(); calcAll();
+  });
+});
+document.querySelectorAll('#pricingGroup button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    state.pricing = b.dataset.val;
+    setActiveBtn('pricingGroup', state.pricing);
+    $('fs-per-fixed').classList.toggle('hidden', state.mode!=='per_share' || state.pricing!=='fixed');
+    $('fs-per-tiered').classList.toggle('hidden', state.mode!=='per_share' || state.pricing!=='tiered');
+    $('fs-pct-fixed').classList.toggle('hidden', state.mode!=='pct_value' || state.pricing!=='fixed');
+    $('fs-pct-tiered').classList.toggle('hidden', state.mode!=='pct_value' || state.pricing!=='tiered');
+    saveSettings(); calcAll();
+  });
+});
+document.querySelectorAll('#targetModeGroup button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    state.targetMode = b.dataset.val;
+    setActiveBtn('targetModeGroup', state.targetMode);
+    $('targetValueLabel').textContent = state.targetMode === 'amount' ? 'Target PnL ($)' : 'Target PnL %';
+    calcAll();
+  });
+});
+document.querySelectorAll('.quickrow button').forEach(b=>{
+  b.addEventListener('click', ()=>{ $('targetPct').value = b.dataset.pct; calcAll(); });
+});
+$('usePriceA').addEventListener('click', ()=>{
+  const t = document.querySelector('#ticketAMain .big');
+  if(t){
+    const v = t.textContent.replace(/[^0-9.]/g,'');
+    if(v){ $('sellPriceB').value = v; calcAll(); }
+  }
+});
+$('tabBtnPrice').addEventListener('click', ()=>{
+  $('tabBtnPrice').classList.add('active'); $('tabBtnUnits').classList.remove('active');
+  $('panelPrice').classList.add('active'); $('panelUnits').classList.remove('active');
+});
+$('tabBtnUnits').addEventListener('click', ()=>{
+  $('tabBtnUnits').classList.add('active'); $('tabBtnPrice').classList.remove('active');
+  $('panelUnits').classList.add('active'); $('panelPrice').classList.remove('active');
+});
+$('currency').addEventListener('change', ()=>{ state.currency = $('currency').value; saveSettings(); calcAll(); });
+$('includeBuyFee').addEventListener('change', ()=>{ state.includeBuyFee = $('includeBuyFee').checked; saveSettings(); calcAll(); });
+$('resetFees').addEventListener('click', (e)=>{
+  e.preventDefault();
+  Object.keys(DEFAULTS).forEach(k=>{ if($(k)) $(k).value = DEFAULTS[k]; });
+  state.mode = DEFAULTS.mode; state.pricing = DEFAULTS.pricing;
+  setActiveBtn('modeGroup', state.mode); setActiveBtn('pricingGroup', state.pricing);
+  $('fs-per-fixed').classList.toggle('hidden', state.mode!=='per_share' || state.pricing!=='fixed');
+  $('fs-per-tiered').classList.toggle('hidden', state.mode!=='per_share' || state.pricing!=='tiered');
+  $('fs-pct-fixed').classList.toggle('hidden', state.mode!=='pct_value' || state.pricing!=='fixed');
+  $('fs-pct-tiered').classList.toggle('hidden', state.mode!=='pct_value' || state.pricing!=='tiered');
+  saveSettings(); calcAll();
+});
+
+document.querySelectorAll('input, select').forEach(el=>{
+  el.addEventListener('input', calcAll);
+});
+
+// Clear-on-focus for Position / Target / Limit-sell fields only — fee schedule inputs keep their original behaviour.
+document.querySelectorAll('input.clearable').forEach(el=>{
+  el.addEventListener('focus', ()=>{
+    el.dataset.prev = el.value;
+    el.value = '';
+  });
+  el.addEventListener('input', saveSettings);
+  el.addEventListener('blur', ()=>{
+    if(el.value === '' && el.dataset.prev){ el.value = el.dataset.prev; }
+    saveSettings();
+    calcAll();
+  });
+});
+
+let saveTimer;
+function saveSettings(){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(async ()=>{
+    const inputs = {};
+    PERSIST_INPUT_IDS.forEach(id=>{ if($(id)) inputs[id] = $(id).value; });
+    const payload = { state, fees: feeParams(), inputs };
+    try{
+      if(window.storage){
+        await window.storage.set('exit-ticket-settings', JSON.stringify(payload), false);
+        return;
+      }
+    }catch(e){ /* fall through to localStorage */ }
+    try{ localStorage.setItem('exit-ticket-settings', JSON.stringify(payload)); }catch(e){ /* storage unavailable */ }
+  }, 400);
+}
+
+async function loadSettings(){
+  let raw = null;
+  try{
+    if(window.storage){
+      const res = await window.storage.get('exit-ticket-settings', false);
+      if(res && res.value) raw = res.value;
+    }
+  }catch(e){ /* not running inside Claude artifact storage, try localStorage */ }
+  if(!raw){
+    try{ raw = localStorage.getItem('exit-ticket-settings'); }catch(e){ /* private mode or unavailable */ }
+  }
+  if(raw){
+    try{
+      const payload = JSON.parse(raw);
+      Object.assign(state, payload.state || {});
+      const fees = payload.fees || {};
+      Object.keys(fees).forEach(k=>{ if($(k)) $(k).value = fees[k]; });
+      const inputs = payload.inputs || {};
+      PERSIST_INPUT_IDS.forEach(id=>{ if(inputs[id] !== undefined && $(id)) $(id).value = inputs[id]; });
+    }catch(e){ /* corrupt or empty, ignore */ }
+  }
+
+  $('currency').value = state.currency || '$';
+  setActiveBtn('modeGroup', state.mode);
+  setActiveBtn('pricingGroup', state.pricing);
+  setActiveBtn('targetModeGroup', state.targetMode);
+  $('includeBuyFee').checked = state.includeBuyFee !== false;
+  $('targetValueLabel').textContent = state.targetMode === 'amount' ? 'Target PnL ($)' : 'Target PnL %';
+  $('fs-per-fixed').classList.toggle('hidden', state.mode!=='per_share' || state.pricing!=='fixed');
+  $('fs-per-tiered').classList.toggle('hidden', state.mode!=='per_share' || state.pricing!=='tiered');
+  $('fs-pct-fixed').classList.toggle('hidden', state.mode!=='pct_value' || state.pricing!=='fixed');
+  $('fs-pct-tiered').classList.toggle('hidden', state.mode!=='pct_value' || state.pricing!=='tiered');
+  calcAll();
+}
+
+loadSettings();
+
+
+// --- PWA SERVICE WORKER REGISTRATION ---
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then((reg) => console.log('Service Worker registered successfully.', reg.scope))
+      .catch((err) => console.log('Service Worker registration failed:', err));
+  });
+}
+
+  
+</script>
+</body>
+</html>
